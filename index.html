@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>untoldcoding</title>
+    <link rel="stylesheet" href="Style3.css" />
+  </head>
+  <body>
+    <div class="envelope">
+      <div class="back"></div>
+      <div class="letter">
+        <div class="heart"></div>
+        <div class="text">
+          <p>
+            I want to say <br />
+            a lot but, sometimes <br />
+            i can't express it, so i <br />
+            made this for you
+          </p>
+          <a href="new.html">Click here</a>
+        </div>
+      </div>
+      <div class="front"></div>
+      <div class="top"></div>
+      <div class="shadow"></div>
+      <div class="text1">
+        <h2>hi baby! i made something for you <3</h2>
+      </div>
+      <div class="text2">
+        <h2>(p.s. hover over the letter)</h2>
+    </div>
+    </div>
+    <script>
+      const text = document.querySelector('.text1');
+      const envelope = document.querySelector('.envelope');
+
+      envelope.addEventListener('mouseover', function() {
+        text.style.transition = 'opacity 1s ease'; // Smooth transition for opacity
+        text.style.opacity = '0'; // Fade out the text
+      });
+
+      envelope.addEventListener('mouseleave', function() {
+      setTimeout(function() {
+        text.style.opacity = '1'; // Fade in the text after the envelope animation
+      }, 500); // 2.5 seconds for the envelope animation duration
+      });
+    </script>
+  </body>
+</html>
